@@ -128,3 +128,17 @@ document.querySelectorAll('.button').forEach(button => {
     window.setTimeout(() => ripple.remove(), 700);
   });
 });
+
+
+// Dedicated mobile screenshot reveals.
+const mobileStorySteps = [...document.querySelectorAll('.story-step')];
+if ('IntersectionObserver' in window && mobileStorySteps.length) {
+  const mobileStoryObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('mobile-visible');
+    });
+  }, { threshold: .16, rootMargin: '0px 0px -8% 0px' });
+  mobileStorySteps.forEach(step => mobileStoryObserver.observe(step));
+} else {
+  mobileStorySteps.forEach(step => step.classList.add('mobile-visible'));
+}

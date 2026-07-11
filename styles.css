@@ -40,3 +40,434 @@ footer{padding:55px 0 25px;background:#010407;color:#afbbc3}.footer-grid{display
 @keyframes ripple{to{transform:scale(4);opacity:0}}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-content>*,.hero-phone-wrap,.iphone-hero,.hero-halo,.hero-grid-pattern,.phone-glow,.orb{animation:none!important;opacity:1!important;transform:none!important}.reveal{opacity:1;transform:none;transition:none}.app-screen,.story-phone,.button,.feature-grid article{transition:none!important}.story-step.active .step-kicker,.story-step.active h2,.story-step.active p,.story-step.active li{animation:none!important}}
+
+
+/* Dedicated mobile product-story experience */
+.mobile-screen-card{display:none}
+
+@media(max-width:760px){
+  body{overflow-x:hidden}
+  .site-header{background:rgba(2,7,11,.82)}
+  .nav-wrap{height:68px}
+  .brand img{width:38px;height:38px}
+
+  .hero{padding:112px 0 52px}
+  .hero-content{max-width:100%}
+  .hero h1{font-size:clamp(45px,13.8vw,62px);line-height:.97;margin:19px 0 18px}
+  .hero-content>p{font-size:16px;line-height:1.6;max-width:34rem}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:10px;margin-top:25px}
+  .hero-actions .button{width:100%}
+  .hero-phone-wrap{height:auto;min-height:0;margin-top:42px;padding-bottom:12px}
+  .hero-halo{width:360px;height:360px}
+  .iphone-hero{width:min(72vw,286px);height:auto;aspect-ratio:1179/2556;transform:none}
+  .iphone-hero .iphone-screen>img{object-fit:cover}
+
+  .story{padding:78px 0 86px;background:linear-gradient(180deg,#061018 0%,#02070b 100%)}
+  .story-layout{display:block}
+  .phone-column{display:none!important}
+  .story-copy{position:relative;z-index:1}
+  .story-step{
+    min-height:0;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:0 0 96px;
+    opacity:1;
+    transform:none;
+    background:none;
+  }
+  .story-step:last-child{padding-bottom:10px}
+  .story-step::before{display:none}
+  .story-step>div:not(.mobile-screen-card){padding:0}
+  .step-number{display:block;margin-bottom:10px;font-size:13px;color:#52616d;letter-spacing:.12em}
+  .step-kicker{font-size:10px}
+  .story-step h2{font-size:clamp(34px,10vw,44px);line-height:1.03;margin:13px 0 15px}
+  .story-step p{font-size:16px;line-height:1.65}
+  .story-step ul{font-size:14px;gap:9px;margin-top:22px}
+
+  .mobile-screen-card{
+    display:grid;
+    place-items:center;
+    order:2;
+    width:100%;
+    margin:31px 0 31px;
+    opacity:0;
+    transform:translateY(28px) scale(.975);
+    transition:opacity .7s cubic-bezier(.2,.75,.25,1),transform .8s cubic-bezier(.2,.75,.25,1);
+  }
+  .story-step.mobile-visible .mobile-screen-card{opacity:1;transform:none}
+  .mobile-phone-shell{
+    position:relative;
+    width:min(78vw,306px);
+    aspect-ratio:1179/2556;
+    padding:8px;
+    border-radius:52px;
+    background:linear-gradient(145deg,#2a3038,#05080c 46%,#252b32);
+    box-shadow:0 32px 75px rgba(0,0,0,.48),inset 0 0 0 1px rgba(255,255,255,.16);
+  }
+  .mobile-phone-shell::before{
+    content:"";
+    position:absolute;
+    inset:3px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:49px;
+    pointer-events:none;
+  }
+  .mobile-phone-shell img{
+    width:100%;height:100%;object-fit:cover;
+    border-radius:44px;
+    background:#030a0e;
+  }
+
+  .features,.security{padding:82px 0}
+  .section-heading{margin-bottom:34px}
+  .section-heading h2,.security h2{font-size:clamp(36px,10vw,45px)}
+  .feature-grid{gap:13px}
+  .feature-grid article{padding:26px 23px;border-radius:23px}
+  .feature-grid h3{font-size:24px}
+  .security-layout{gap:42px}
+  .security-visual{min-height:350px}
+  .orb{width:320px;height:320px}
+  .security-card{width:min(100%,310px);padding:31px 24px}
+
+  .download{padding-bottom:70px}
+  .download-card{border-radius:27px;padding:34px 22px}
+  .download-card h2{font-size:30px}
+  .download-card img{width:76px}
+
+  footer{padding-top:45px}
+}
+
+@media(max-width:390px){
+  .container{width:min(100% - 22px,1180px)}
+  .hero h1{font-size:43px}
+  .mobile-phone-shell{width:82vw;border-radius:47px}
+  .mobile-phone-shell img{border-radius:40px}
+  .story-step h2{font-size:34px}
+}
+
+/* Official Finance Manager identity */
+.brand img,
+.footer-brand img {
+  object-fit: contain;
+  padding: 3px;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.24),
+    inset 0 0 0 1px rgba(3, 18, 28, 0.08);
+}
+
+.security-card img,
+.download-card > img,
+.privacy-hero-logo {
+  object-fit: contain;
+  padding: 5px;
+  border-radius: 24%;
+  background: #ffffff;
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.24),
+    0 0 48px rgba(25, 198, 180, 0.12);
+}
+
+.security-card img {
+  width: 118px;
+  height: 118px;
+}
+
+.download-card > img {
+  width: 86px;
+  height: 86px;
+}
+
+.privacy-hero-logo {
+  width: 104px;
+  height: 104px;
+}
+
+@media (max-width: 760px) {
+  .brand img,
+  .footer-brand img {
+    padding: 2px;
+    border-radius: 11px;
+  }
+
+  .security-card img {
+    width: 102px;
+    height: 102px;
+  }
+
+  .download-card > img {
+    width: 78px;
+    height: 78px;
+  }
+
+  .privacy-hero-logo {
+    width: 92px;
+    height: 92px;
+  }
+}
+
+/* Adobe Express-inspired refinement — July 2026 */
+:root{
+  --express-purple:#7c3aed;
+  --express-pink:#e83e8c;
+  --express-orange:#ff7a1a;
+  --express-blue:#246bfd;
+  --express-gradient:linear-gradient(105deg,#7c3aed 0%,#d946ef 32%,#ff5c7a 64%,#ff8a1f 100%);
+}
+
+body{
+  font-family:"Adobe Clean","Adobe Clean UX","Helvetica Neue",Helvetica,Arial,-apple-system,BlinkMacSystemFont,sans-serif;
+  font-weight:400;
+  letter-spacing:-.008em;
+}
+
+.site-header{
+  background:rgba(2,7,11,.78);
+  backdrop-filter:blur(22px) saturate(145%);
+}
+
+.nav-links,
+.button,
+.step-kicker,
+.eyebrow{
+  font-family:"Adobe Clean","Adobe Clean UX","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.nav-links{font-weight:600}
+.nav-cta{
+  background:#fff;
+  color:#111!important;
+  padding:11px 19px;
+  border-radius:999px;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+}
+
+.hero{
+  background:
+    radial-gradient(circle at 46% 16%,rgba(124,58,237,.18),transparent 23%),
+    radial-gradient(circle at 60% 22%,rgba(232,62,140,.13),transparent 25%),
+    radial-gradient(circle at 50% 38%,rgba(17,185,176,.13),transparent 31%),
+    linear-gradient(180deg,#02070b 0%,#061018 100%);
+}
+
+.hero h1,
+.story-step h2,
+.section-heading h2,
+.security h2,
+.download-card h2,
+.legal-hero h1{
+  font-weight:800;
+  letter-spacing:-.047em;
+}
+
+.hero h1{
+  font-size:clamp(54px,7.3vw,90px);
+  line-height:.98;
+}
+
+.hero h1 em{
+  color:transparent;
+  background:var(--express-gradient);
+  -webkit-background-clip:text;
+  background-clip:text;
+}
+
+.hero-content>p{
+  font-size:19px;
+  line-height:1.55;
+  letter-spacing:-.012em;
+}
+
+.eyebrow{
+  color:#efe8ff;
+  font-size:12px;
+  letter-spacing:.13em;
+  text-transform:none;
+}
+
+.eyebrow span{
+  width:34px;
+  height:3px;
+  border-radius:999px;
+  background:var(--express-gradient);
+}
+
+.button{
+  min-height:50px;
+  padding:0 23px;
+  font-size:15px;
+  font-weight:700;
+  border-radius:999px;
+}
+
+.button.primary{
+  color:#fff;
+  background:var(--express-gradient);
+  box-shadow:0 14px 34px rgba(196,62,175,.25);
+}
+
+.button.ghost{
+  background:rgba(255,255,255,.09);
+  border-color:rgba(255,255,255,.16);
+}
+
+/* Smaller iPhones */
+.hero-phone-wrap{
+  height:585px;
+  margin-top:22px;
+}
+
+.hero-halo{
+  width:500px;
+  height:500px;
+}
+
+.iphone-hero{
+  width:260px;
+  height:566px;
+  border-radius:50px;
+}
+
+.iphone{
+  padding:8px;
+  border-radius:50px;
+}
+
+.iphone::before{
+  border-radius:47px;
+}
+
+.iphone-screen{
+  border-radius:43px;
+}
+
+.story{
+  padding:112px 0;
+}
+
+.story-layout{
+  grid-template-columns:340px minmax(0,1fr);
+  gap:82px;
+}
+
+.phone-sticky{
+  top:104px;
+  height:calc(100vh - 130px);
+  min-height:590px;
+}
+
+.phone-glow{
+  width:365px;
+  height:365px;
+  background:radial-gradient(circle,rgba(124,58,237,.13),rgba(17,185,176,.10) 38%,transparent 68%);
+}
+
+.story-phone{
+  width:244px;
+  height:531px;
+  border-radius:47px;
+}
+
+.story-step{
+  min-height:84vh;
+}
+
+.step-kicker{
+  color:#ff9b47;
+  text-transform:none;
+  letter-spacing:.08em;
+  font-size:13px;
+}
+
+.story-step h2{
+  font-size:clamp(38px,4.7vw,58px);
+  line-height:1.04;
+}
+
+.story-step p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.features{
+  background:#f7f7f8;
+}
+
+.feature-grid article{
+  border-radius:32px;
+  border-color:#e7e7ea;
+  box-shadow:0 12px 32px rgba(24,24,27,.055);
+}
+
+.feature-grid b{
+  border-radius:14px;
+  background:linear-gradient(135deg,#f0eaff,#ffe9f3);
+  color:#7c3aed;
+}
+
+.feature-grid h3{font-weight:750;letter-spacing:-.025em}
+
+.download-card{
+  background:
+    radial-gradient(circle at 84% 20%,rgba(232,62,140,.22),transparent 25%),
+    radial-gradient(circle at 14% 100%,rgba(17,185,176,.22),transparent 30%),
+    linear-gradient(125deg,#151326,#102d37);
+}
+
+@media(max-width:1040px) and (min-width:761px){
+  .story-layout{grid-template-columns:300px 1fr;gap:48px}
+  .story-phone{width:224px;height:487px}
+  .phone-sticky{min-height:540px}
+}
+
+@media(max-width:760px){
+  .hero h1{
+    font-size:clamp(43px,12vw,54px);
+    line-height:1;
+  }
+
+  .hero-content>p{
+    font-size:16px;
+    line-height:1.55;
+  }
+
+  .hero-phone-wrap{
+    margin-top:35px;
+    padding-bottom:5px;
+  }
+
+  .iphone-hero{
+    width:min(62vw,236px);
+    height:auto;
+    aspect-ratio:1179/2556;
+    border-radius:44px;
+  }
+
+  .iphone-screen{border-radius:37px}
+
+  .story-step h2{
+    font-size:clamp(32px,9.5vw,40px);
+    letter-spacing:-.04em;
+  }
+
+  .mobile-phone-shell{
+    width:min(68vw,262px);
+    padding:7px;
+    border-radius:44px;
+  }
+
+  .mobile-phone-shell::before{border-radius:41px}
+  .mobile-phone-shell img{border-radius:37px}
+
+  .feature-grid article{
+    border-radius:27px;
+  }
+}
+
+@media(max-width:390px){
+  .iphone-hero{width:min(60vw,220px)}
+  .mobile-phone-shell{width:70vw}
+}

@@ -1,31 +1,13 @@
-# Finance Manager Website
+# Finance Manager Official Responsive Website — Adobe Express-inspired edition
 
-Apple-inspired responsive landing page using the real Finance Manager iPhone screenshots.
+This GitHub Pages package includes:
 
-## Main experience
+- the official Finance Manager SVG logo
+- reduced iPhone mockup sizes
+- Adobe Express-inspired typography, rounded controls, spacing and gradient accents
+- sticky desktop storytelling
+- dedicated stacked mobile experience
+- real app screenshots
+- responsive Privacy Policy page
 
-- The phone remains sticky while feature explanations scroll beside it.
-- The displayed app screenshot changes automatically for each section.
-- Included screens: Dashboard, Calendar Summary, Calendar, Bills, Budget, Reports and More.
-- On narrow mobile displays the sticky screenshot remains visible while each explanation rises over the lower part of the page.
-
-## Files
-
-- `index.html` — main landing page
-- `privacy.html` — privacy policy
-- `styles.css` — responsive visual design
-- `script.js` — navigation and scroll-driven screenshot changes
-- `assets/screens/` — original app screenshots
-- `.nojekyll` — GitHub Pages compatibility
-
-## Publish on GitHub Pages
-
-1. Upload every file and folder to the repository root.
-2. Open **Settings → Pages**.
-3. Choose **Deploy from a branch**.
-4. Choose `main` and `/ (root)`.
-5. Save and wait for the deployment URL.
-
-## Before launch
-
-Replace `contact@example.com` with your real support/privacy email.
+Upload every file and folder in this package to the root of the GitHub repository, replacing the existing website files.
