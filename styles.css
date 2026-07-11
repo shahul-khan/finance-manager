@@ -558,3 +558,58 @@ body{
     margin: 18px 0 28px !important;
   }
 }
+@media (max-width: 760px) {
+  .story {
+    padding: 48px 0 60px !important;
+  }
+
+  .story-step {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 0 52px !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  .story-step:last-child {
+    padding-bottom: 0 !important;
+  }
+
+  .story-step > div:not(.mobile-screen-card) {
+    order: 1;
+    padding: 0 !important;
+  }
+
+  .story-step .step-number {
+    order: 0;
+  }
+
+  .mobile-screen-card {
+    order: 2 !important;
+    margin: 18px 0 0 !important;
+
+    /* Keep the phone visible immediately */
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .mobile-phone-shell {
+    width: min(72vw, 276px) !important;
+  }
+
+  .story-step h2 {
+    margin: 8px 0 10px !important;
+  }
+
+  .story-step p {
+    margin: 0 0 12px !important;
+  }
+
+  .story-step ul {
+    margin: 12px 0 0 !important;
+  }
+}
